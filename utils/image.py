@@ -8,7 +8,16 @@ from PIL import Image, ImageDraw
 
 
 def draw_image_with_click(image: Image.Image, x: int, y: int):
-    """Draw a click on an image with absolute coordinates."""
+    """Draw a click on an image with absolute coordinates.
+
+    Args:
+        image: PIL image.
+        x: X absolute coordinate of the click.
+        y: Y absolute coordinate of the click.
+
+    Returns:
+        PIL image with the click drawn on it.
+    """
     draw = ImageDraw.Draw(image)
     draw.ellipse((x - 5, y - 5, x + 5, y + 5), fill="red", outline="red")
     return image
@@ -19,7 +28,7 @@ def convert_image_to_base64_url(image: Image.Image, format: str = "JPEG") -> str
 
     Args:
         image: PIL image.
-        format: Image format supported by Pillow (see https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html).
+        format: PIL image format (see https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html).
 
     Returns:
         Base64 URL.
@@ -30,10 +39,10 @@ def convert_image_to_base64_url(image: Image.Image, format: str = "JPEG") -> str
 
 
 def _get_mime_type_from_format(format: str) -> str:
-    """Get the mime type associated to the PIL image format.
+    """Get the MIME type associated to the PIL image format.
 
     Args:
-        format: PIL image format.
+        format: PIL image format (see https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html).
 
     Returns:
         MIME type associated to the PIL image format.
@@ -50,7 +59,7 @@ def _encode_image_to_base64_string(image: Image.Image, format: str, jpeg_quality
 
     Args:
         image: PIL image.
-        format: Image format supported by Pillow (see https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html).
+        format: PIL image format (see https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html).
         jpeg_quality: JPEG compression quality.
 
     Returns:
