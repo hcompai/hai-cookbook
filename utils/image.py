@@ -5,8 +5,7 @@ import math
 from io import BytesIO
 from mimetypes import types_map
 
-import pathlib as pl
-from PIL import Image, ImageDraw
+from PIL import Image
 
 
 def smart_resize(
