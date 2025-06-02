@@ -5,6 +5,9 @@ import math
 from io import BytesIO
 from mimetypes import types_map
 
+import pathlib as pl
+import os
+
 from PIL import Image, ImageDraw
 
 
@@ -43,20 +46,43 @@ def smart_resize(
     return h_bar, w_bar
 
 
-def draw_image_with_click(image: Image.Image, x: int, y: int):
-    """Draw a click on an image with absolute coordinates.
 
-    Args:
-        image: PIL image.
-        x: X absolute coordinate of the click.
-        y: Y absolute coordinate of the click.
+project_root_dir = pl.Path.cwd().resolve().parent.parent
 
-    Returns:
-        PIL image with the click drawn on it.
+#CURSOR_PATH = cursor_path = os.path.join(project_root_dir, "data", "cursor_image_hand.png")
+CURSOR_PATH = cursor_path = os.path.join(project_root_dir, "data", "cursor_image_red.png")
+def draw_image_with_click(image: Image.Image, x: int, y: int, cursor_path: str = CURSOR_PATH, cursor_size: int = 32) -> Image.Image:
     """
-    draw = ImageDraw.Draw(image)
-    draw.ellipse((x - 5, y - 5, x + 5, y + 5), fill="red", outline="red")
-    return image
+    Overlays a resized mouse cursor icon at (x, y) on the image.
+    Raises an error if the coordinates are out of bounds.
+    
+    Parameters:
+    - image: PIL Image to annotate.
+    - x, y: pixel coordinates to place the cursor.
+    - cursor_path: path to the cursor image (PNG with transparency).
+    - cursor_size: target size (in pixels) for the cursor icon's width and height.
+    """    
+    width, height = image.size
+
+    # Check bounds
+    if not (0 <= x < width) or not (0 <= y < height):
+        raise ValueError(f"Coordinates ({x}, {y}) are out of image bounds ({width}, {height})")
+
+    # Load and resize cursor icon
+    cursor = Image.open(cursor_path).convert("RGBA")
+    cursor = cursor.resize((cursor_size, cursor_size), Image.LANCZOS)
+    cursor_h, cursor_w = cursor.size
+    # Convert main image to RGBA
+    annotated = image.convert("RGBA")
+
+    # Paste cursor image centered on click coordinates
+    annotated.paste(cursor, (x - cursor_w//2, y - cursor_h//2), cursor)
+
+    # Convert back to RGB if needed
+    annotated = annotated.convert("RGB")
+    
+    return annotated
+
 
 
 def convert_image_to_base64_url(image: Image.Image, format: str = "JPEG") -> str:
