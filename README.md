@@ -1,6 +1,6 @@
-# H Company cookbook
+# H.AI cookbook
 
-The H Company cookbook provides code examples and guides to help developers using tools developed by [**H Company**](https://www.hcompany.ai/).
+The H.AI cookbook provides code examples and guides to help developers using tools developed by [**H Company**](https://www.hcompany.ai/).
 
 ## Holo-1
 
