@@ -1,6 +1,6 @@
 # H.AI cookbook
 
-The H.AI cookbook provides code examples and guides to help developers using tools developed by [**H Company**](https://www.hcompany.ai/).
+The H.AI cookbook provides code examples and guides to help developers use models developed by [**H Company**](https://www.hcompany.ai/).
 
 ## Holo-1
 
@@ -8,7 +8,7 @@ Holo-1 is an Action Vision-Language Model (VLM) developed by [**H Company**](htt
 
 As part of a broader agentic architecture, Holo-1 acts as a policy, localizer, or validator, helping the agent understand and act in digital environments.
 
-Trained on a mix of open-access, synthetic, and self-generated data, Holo-1 enables state-of-the-art (SOTA) performance on the WebVoyager benchmark, offering the best accuracy/cost tradeoff among current models. It also excels in UI localization tasks such as Screenspot, Screenspot-V2, Screenspot-Pro, GroundUI-Web, and our own newly introduced benchmark WebClick.
+Trained on a mix of open-access, synthetic, and self-generated data, Holo-1 enables state-of-the-art (SOTA) performance on the WebVoyager benchmark, offering the best accuracy/cost tradeoff among current models. It also excels in UI localization tasks such as Screenspot, Screenspot-V2, Screenspot-Pro, GroundUI-Web, and our own newly introduced benchmark, WebClick.
 
 Holo-1 is optimized for both accuracy and cost-efficiency, making it a strong open-source alternative to existing VLMs.
 
@@ -17,11 +17,10 @@ Holo-1 is optimized for both accuracy and cost-efficiency, making it a strong op
 
 ### Examples:
 
-- [How to deploy Holo-1 (3B or 7B) on Amazon Sagemaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)
-- [Using AWS SageMaker to Invoke Holo-1 for a localisation task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localisation.ipynb)
+- [How to deploy Holo-1 (3B or 7B) on Amazon SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)
+- [Using AWS SageMaker to Invoke Holo-1 for a localization task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localization.ipynb)
 
 
 ## License
 
 This library is licensed under the Apache 2.0 License. For more details, please take a look at the LICENSE file.
-
