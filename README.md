@@ -18,6 +18,7 @@ Holo1 is optimized for both accuracy and cost-efficiency, making it a strong ope
 ### Examples:
 
 - [How to deploy Holo1 (3B or 7B) on Amazon SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)
+- [Using AWS SageMaker to Invoke Holo-1 for a navigation task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_navigation.ipynb)
 - [Using AWS SageMaker to Invoke Holo1 for a localization task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localization.ipynb)
 
 
