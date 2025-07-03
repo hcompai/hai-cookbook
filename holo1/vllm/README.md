@@ -86,7 +86,7 @@ print(chat_completion.choices[0].message.content)
 - Holo1 is a multimodal model, so you can adjust image/video limits using `--limit-mm-per-prompt`.
 - Reduce `--max-model-len` or `--gpu-memory-utilization` if your GPU runs out of memory.
 - Ensure your GPU supports bfloat16 (e.g., A100, L40S, RTX 4090, etc.), use float16 otherwise.
-- Port 8000 must be free; change it with -p <host>:8000 if needed.
+- Port 8000 must be free; change it with `-p <host>:8000` if needed.
 
 ## Examples
 
