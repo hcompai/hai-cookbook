@@ -87,3 +87,10 @@ print(chat_completion.choices[0].message.content)
 - Reduce `--max-model-len` or `--gpu-memory-utilization` if your GPU runs out of memory.
 - Ensure your GPU supports bfloat16 (e.g., A100, L40S, RTX 4090, etc.), use float16 otherwise.
 - Port 8000 must be free; change it with -p <host>:8000 if needed.
+
+## Examples
+
+The endpoint is in service. You can use OpenAI Client to perform real time inference on the deployed Holo-1 model.
+
+- [Using OpenAI Client to invoke Holo1 for a navigation task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_navigation.ipynb)
+- [Using OpenAI Client to invoke Holo1 for a localization task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_localization.ipynb)
