@@ -11,13 +11,13 @@
 2. Install a compatible version of `transformers`:
 
 ```
-pip install "transformers<4.53.0" to get the correct version of transformers
+pip install "transformers<4.53.0" ≈
 ```
 
 ### Example
 
 ```
-vllm serve Hcompany/Holo1-3B --port 8081
+vllm serve Hcompany/Holo1-3B --port 8000
 ```
 
 ## Deploy via Docker
