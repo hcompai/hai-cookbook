@@ -1,6 +1,29 @@
 # How to deploy Holo1 (3B or 7B) locally with vLLM on Nvidia 
 
+## Run a vLLM-Server Locally
 
+### Requirements
+- An **NVIDIA GPU** with drivers installed  
+
+### Installation
+1. Install vLLM using the instructions provided by [vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/index.html)
+
+2. Install a compatible version of `transformers`:
+
+```
+pip install "transformers<4.53.0"
+```
+
+### Example
+
+```
+vllm serve Hcompany/Holo1-3B \
+    --dtype bfloat16 \
+    --gpu-memory-utilization 0.9 \
+    --limit-mm-per-prompt 'image=3,video=0' \
+    --mm-processor-kwargs '{"max_pixels": 1003520}' \
+    --max-model-len 16384
+```
 
 ## Deploy via Docker
 
