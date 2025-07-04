@@ -11,7 +11,7 @@
 2. Install a compatible version of `transformers`:
 
 ```
-pip install "transformers<4.53.0" ≈
+pip install "transformers<4.53.0"
 ```
 
 ### Example
