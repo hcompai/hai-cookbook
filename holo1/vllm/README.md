@@ -48,9 +48,9 @@ docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.9.1 \
 
 💡 To run Holo1 7B, change --model to HCompany/Holo1-7B.
 
-### Invoking Holo1 via API
+## Invoking Holo1 via API
 
-After the container is running, you can send requests to:
+When vLLM is running, you can send requests to:
 
 ```
 http://localhost:8000/v1/chat/completions
