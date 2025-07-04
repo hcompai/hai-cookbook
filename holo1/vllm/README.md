@@ -17,7 +17,12 @@ pip install "transformers<4.53.0"
 ### Example
 
 ```
-vllm serve Hcompany/Holo1-3B --port 8000
+vllm serve Hcompany/Holo1-3B \
+    --dtype bfloat16 \
+    --gpu-memory-utilization 0.9 \
+    --limit-mm-per-prompt 'image=3,video=0' \
+    --mm-processor-kwargs '{"max_pixels": 1003520}' \
+    --max-model-len 16384
 ```
 
 ## Deploy via Docker
