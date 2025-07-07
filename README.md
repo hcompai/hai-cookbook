@@ -15,13 +15,13 @@ Holo1 is optimized for both accuracy and cost-efficiency, making it a strong ope
 - [Holo1 3B](https://huggingface.co/Hcompany/Holo1-3B) - [Qwen RESEARCH LICENSE](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/blob/main/LICENSE)
 - [Holo1 7B](https://huggingface.co/Hcompany/Holo1-7B) - Apache 2.0
 
-### vLLM examples
+### vLLM guides:
 
 - [How to deploy Holo1 (3B or 7B) locally with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/README.md)
 - [Using OpenAI Client to invoke Holo1 for a navigation task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_navigation.ipynb)
 - [Using OpenAI Client to invoke Holo1 for a localization task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_localization.ipynb)
 
-### AWS Sagemaker examples:
+### AWS SageMaker guides:
 
 - [How to deploy Holo1 (3B or 7B) on Amazon SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)
 - [Using AWS SageMaker to Invoke Holo1 for a navigation task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_navigation.ipynb)
