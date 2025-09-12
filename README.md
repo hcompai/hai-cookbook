@@ -16,6 +16,8 @@ The H.AI cookbook provides code examples and guides to help developers use model
 
 ## Holo1.5 (15/09/2025)
 
+[![Holo1.5 Collection](https://img.shields.io/badge/Holo1.5_Collection-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/Hcompany/holo15-68c1a5736e8583a309d23d9b)
+
 H Company is pushing the boundaries of what our models are capable of achieving within a wide range of agentic scenarios. Our Holo1 model family, released in June 2025, provides a robust starting point for GUI agents, from which we’ve continued to improve the reliability and accuracy of our Action Vision Language Models (VLMs).
 
 The Holo1.5 family breaks new ground by demonstrating state-of-the-art performance across benchmarks, establishing new baselines for all model sizes, from 3B to 72B. It excels in UI localization tasks such as Screenspot, Screenspot-V2, Screenspot-Pro, GroundUI-Web, Showdown and our own newly introduced WebClick benchmark. Holo1.5 also proves impressively adept in Content Understanding and Question Answering (QA) within web, computer and mobile use scenarios.
@@ -23,6 +25,8 @@ The Holo1.5 family breaks new ground by demonstrating state-of-the-art performan
 When used in the Surfer-H web agent system, Holo1.5 enables agents to navigate real applications with greater accuracy, reliability, and efficiency.
 
 ## Holo1 (03/09/2025)
+
+[![Holo1 Collection](https://img.shields.io/badge/Holo1_Collection-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/Hcompany/holo1-683dd1eece7eb077b96d0cbd)
 
 Holo1 is an Action Vision-Language Model (VLM) developed by [**H Company**](https://www.hcompany.ai/) for use in the Surfer-H web agent system. It is designed to interact with web interfaces like a human user.
 
