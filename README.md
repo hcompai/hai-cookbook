@@ -6,7 +6,7 @@ The H.AI cookbook provides code examples and guides to help developers use model
 
 | Version | Task                 | Notebook                                                                                                                                          |
 |---------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Holo1.5 | Inference, Fine-tuning | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                     |
+| Holo1.5 | Inference | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                     |
 | Holo1   | Deployment           | [Deploy Holo1 with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/README.md)                                     |
 | Holo1   | Inference            | [vLLM Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_navigation.ipynb)                                    |
 | Holo1   | Inference            | [vLLM Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_localization.ipynb)                               |
