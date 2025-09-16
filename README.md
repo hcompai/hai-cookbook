@@ -4,15 +4,16 @@ The H.AI cookbook provides code examples and guides to help developers use model
 
 ## Table of Contents
 
-| Version | Task                 | Notebook                                                                                                                                          |
-|---------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Holo1.5 | Inference | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                     |
-| Holo1   | Deployment           | [Deploy Holo1 with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/README.md)                                     |
-| Holo1   | Inference            | [vLLM Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_navigation.ipynb)                                    |
-| Holo1   | Inference            | [vLLM Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_localization.ipynb)                               |
-| Holo1   | Deployment           | [Deploy Holo1 on AWS SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)                               |
-| Holo1   | Inference            | [SageMaker Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_navigation.ipynb)                         |
-| Holo1   | Inference            | [SageMaker Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localization.ipynb)                     |
+| Version | Task             | Notebook                                                                                                                                          |
+|---------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Holo1.5 | Inference        | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                         |
+| Holo1.5 | Inference        | [Holo1.5 Localization task via API](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/openai_client/invoke_localization.ipynb)                                         |
+| Holo1   | Deployment       | [Deploy Holo1 with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/README.md)                                        |
+| Holo1   | Inference        | [vLLM Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_navigation.ipynb)                                      |
+| Holo1   | Inference        | [vLLM Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/invoke_localization.ipynb)                                  |
+| Holo1   | Deployment       | [Deploy Holo1 on AWS SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)                                   |
+| Holo1   | Inference        | [SageMaker Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_navigation.ipynb)                            |
+| Holo1   | Inference        | [SageMaker Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localization.ipynb)                        |
 
 ## Holo1.5 (15/09/2025)
 
