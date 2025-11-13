@@ -6,6 +6,8 @@ The H.AI cookbook provides code examples and guides to help developers use model
 
 | Version | Task             | Notebook                                                                                                                                          |
 |---------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Holo2   | Inference        | [Holo2 Localization with HuggingFace](https://github.com/hcompai/hai-cookbook/blob/main/holo2/holo_2_localization_huggingface.ipynb)                                         |
+| Holo2   | Inference        | [Holo2 Localization with HAI API](https://github.com/hcompai/hai-cookbook/blob/main/holo2/holo_2_localization_hosted_api.ipynb)
 | Holo1.5 | Inference        | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                         |
 | Holo1.5 | Inference        | [Holo1.5 Localization task via API](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/openai_client/invoke_localization.ipynb)                                         |
 | Holo1   | Deployment       | [Deploy Holo1 with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo1/vllm/README.md)                                        |
@@ -14,6 +16,12 @@ The H.AI cookbook provides code examples and guides to help developers use model
 | Holo1   | Deployment       | [Deploy Holo1 on AWS SageMaker](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/deploy.ipynb)                                   |
 | Holo1   | Inference        | [SageMaker Navigation Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_navigation.ipynb)                            |
 | Holo1   | Inference        | [SageMaker Localization Task](https://github.com/hcompai/hai-cookbook/blob/main/holo1/sagemaker/invoke_localization.ipynb)                        |
+
+
+
+## Holo2 (13/11/2025)
+
+[![Holo2 Collection](https://img.shields.io/badge/Holo2_Collection-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/Hcompany/holo2)
 
 ## Holo1.5 (15/09/2025)
 
