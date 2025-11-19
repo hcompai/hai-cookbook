@@ -6,6 +6,7 @@ The H.AI cookbook provides code examples and guides to help developers use model
 
 | Version | Task             | Notebook                                                                                                                                          |
 |---------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Holo2   | Deployment       | [Deploy Holo2 with vLLM on Nvidia](https://github.com/hcompai/hai-cookbook/blob/main/holo2/deploy_with_vllm.md)   
 | Holo2   | Inference        | [Holo2 Localization with HuggingFace](https://github.com/hcompai/hai-cookbook/blob/main/holo2/holo_2_localization_huggingface.ipynb)                                         |
 | Holo2   | Inference        | [Holo2 Localization with HAI API](https://github.com/hcompai/hai-cookbook/blob/main/holo2/holo_2_localization_hosted_api.ipynb)
 | Holo1.5 | Inference        | [Holo1.5 Quickstart](https://github.com/hcompai/hai-cookbook/blob/main/holo1_5/holo_1_5_quickstart.ipynb)                                         |
