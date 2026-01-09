@@ -4,6 +4,7 @@
 
 ### Requirements
 - An **NVIDIA GPU** with drivers installed  
+- vLLM above 0.13 is required to use the holo2 reasoning parser
 
 ### Installation
 1. Install vLLM using the instructions provided by [vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/index.html)
@@ -17,12 +18,9 @@ You can launch vllm from the command line after installation.
 vllm serve Hcompany/Holo2-4B \
     --dtype bfloat16 \
     --max-model-len=65536 \
-    --reasoning-parser=deepseek_r1
+    --reasoning-parser=holo2
     --limit-mm-per-prompt={"image": 3, "video": 0}
 ```
-
-### Notes
-To disable thinking mode, `--reasoning-parser` argument needs to be removed. 
 
 ## Deploy via Docker
 
@@ -36,16 +34,15 @@ To disable thinking mode, `--reasoning-parser` argument needs to be removed.
 ### Example: Run Holo2 4B
 
 ```
-docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.11.0 \
+docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.13.0 \
     --model Hcompany/Holo2-4B \
     --dtype bfloat16 \
     --max-model-len=65536 \
-    --reasoning-parser=deepseek_r1
+    --reasoning-parser=holo2
     --limit-mm-per-prompt={"image": 3, "video": 0}
 ```
 
 ### Notes
-- To disable thinking mode, `--reasoning-parser` argument needs to be removed. 
 - To run Holo2 8B, change --model to HCompany/Holo2-8B.
 - To run Holo2 30B A3B, change --model to HCompany/Holo2-30B-3AB and add --tensor-parallel-size 2
 
@@ -53,15 +50,9 @@ docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.11.0 \
 
 Holo2 models are reasoning models. In order to extract reasoning content for a request, we need to set the `--reasoning-parser` accordingly in vllm (docker or vllm serve). 
 
-Holo2 chat template is configurable to enable and disable thinking. By default, Holo2 is in thinking mode. So if `--reasoning-parser`
-is not provided, it is required to disable thinking at the request level. 
+Holo2 chat template is configurable to enable and disable thinking. By default, Holo2 is in thinking mode. To configure thinking mode at the request level:
 
-Here the compatibility grid for `--reasoning-parser` arg
-
-| Parser      | Features | Request-level argument |
-|-------------|----------|------------------------|
-| deepseek_r1 | Thinking mode enabled; structured output supported | |
-| None        | Thinking mode disabled; structured output supported | {"chat_template_kwargs": {"thinking": false }}` |
+`{"chat_template_kwargs": {"thinking": false }}`
 
 ## Invoking Holo2 via API
 
@@ -71,7 +62,7 @@ When vLLM is running, you can send requests to:
 http://localhost:8000/v1/chat/completions
 ```
 
-### Test with curl - with deepseek_r1 reasoning parser (thinking mode)
+### Test with curl: thinking mode
 
 ```
 curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application/json"     -d '{
@@ -83,7 +74,7 @@ curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application
     }'
 ```
 
-### Test with curl - without reasoning parser (no thinking mode)
+### Test with curl: thinking mode disabled
 
 ```
 curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application/json"     -d '{
@@ -120,7 +111,7 @@ client = OpenAI(
     api_key=API_KEY
 )
 
-# With deepseek_r1 reasoning parser (thinking mode)
+# Thinking mode enabled by default
 chat_completion = client.chat.completions.create(
     model=MODEL,
     messages=[
@@ -131,7 +122,7 @@ chat_completion = client.chat.completions.create(
 
 print(chat_completion.choices[0].message.content)
 
-# Without reasoning parser (no thinking mode)
+# Without thinking mode
 chat_completion = client.chat.completions.create(
     model=MODEL,
     messages=[
