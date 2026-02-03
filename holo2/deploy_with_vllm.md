@@ -44,7 +44,8 @@ docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.13.0 \
 
 ### Notes
 - To run Holo2 8B, change --model to HCompany/Holo2-8B.
-- To run Holo2 30B A3B, change --model to HCompany/Holo2-30B-3AB and add --tensor-parallel-size 2
+- To run Holo2 {30B A3B|235B A22B}, change --model to HCompany/Holo2-{30B-A3B|235B-A22B} and add --tensor-parallel-size {2|8}
+- There's a known performance degradation in the Qwen3-VL architecture since vLLM v0.11.2. To get the best localization performance, please install triton 3.6 on the vLLM image 
 
 ## Holo2 reasoning parser compatibility
 
