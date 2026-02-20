@@ -43,8 +43,8 @@ docker run -it --gpus=all --rm -p 8000:8000 vllm/vllm-openai:v0.13.0 \
 ```
 
 ### Notes
-- To run Holo2 8B, change --model to HCompany/Holo2-8B.
-- To run Holo2 {30B A3B|235B A22B}, change --model to HCompany/Holo2-{30B-A3B|235B-A22B} and add --tensor-parallel-size {2|8}
+- To run Holo2 8B, change --model to Hcompany/Holo2-8B.
+- To run Holo2 {30B A3B|235B A22B}, change --model to Hcompany/Holo2-{30B-A3B|235B-A22B} and add --tensor-parallel-size {2|8}
 - There's a known performance degradation in the Qwen3-VL architecture since vLLM v0.11.2. To get the best localization performance, please install triton 3.6 on the vLLM image 
 
 ## Holo2 reasoning parser compatibility
@@ -67,7 +67,7 @@ http://localhost:8000/v1/chat/completions
 
 ```
 curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application/json"     -d '{
-        "model": "HCompany/Holo2-4B",
+        "model": "Hcompany/Holo2-4B",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": "Who won the world series in 2020?"}
@@ -79,7 +79,7 @@ curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application
 
 ```
 curl http://localhost:8000/v1/chat/completions     -H "Content-Type: application/json"     -d '{
-        "model": "HCompany/Holo2-4B",
+        "model": "Hcompany/Holo2-4B",
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": "Who won the world series in 2020?"}
@@ -105,7 +105,7 @@ from openai import OpenAI
 
 BASE_URL = "http://localhost:8000/v1"
 API_KEY = "EMPTY"
-MODEL = "HCompany/Holo2-4B"
+MODEL = "Hcompany/Holo2-4B"
 
 client = OpenAI(
     base_url=BASE_URL,
@@ -137,7 +137,7 @@ chat_completion = client.chat.completions.create(
 🔐 Note: The API key is not used by vLLM, but required by the OpenAI SDK — use "EMPTY" as a placeholder.
 
 ### Notes
-- `--model` can be set to `HCompany/Holo2-4B`, `HCompany/Holo2-8B` or `HCompany/Holo2-30B-A3B`
+- `--model` can be set to `Hcompany/Holo2-4B`, `Hcompany/Holo2-8B` or `Hcompany/Holo2-30B-A3B`
 - `--gpus=all` enables all NVIDIA GPUs for the container.
 - Holo2 is a multimodal model, so you can adjust image limits using `--limit-mm-per-prompt`.
 - Reduce `--max-model-len` or `--gpu-memory-utilization` if your GPU runs out of memory.
